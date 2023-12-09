@@ -20,7 +20,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   #root {
-    background: ${Themes.white};
+    background: ${Themes.yellow};
     background-repeat: no-repeat;
     background-size: calc(120vh / 2);
     background-position: center right;
