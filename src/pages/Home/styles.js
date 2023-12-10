@@ -40,6 +40,7 @@ padding: 10px;
 `
 export const Text = styled.p`
 font-family: 'Roboto', sans-serif;
+font-size: 14px;
 padding: 10px;
 `
 export const Conteudo = styled.div`
@@ -59,6 +60,6 @@ export const Logo = styled.img`
 `
 
 export const Frase = styled.div`
-
+font-size: 24px;
 `
 
