@@ -22,12 +22,23 @@ width: 300px;
 `
 
 export const Layer2 = styled.div`
+display: flex;
+flex-direction: row;
 background-color: ${Themes.black};
-color: white;
+color: ${Themes.yellow};
 `
 export const Layer3 = styled.div`
+display: flex;
+flex-direction: row;
 background-color: ${Themes.yellow};
 color: ${Themes.black};
+`
+export const Layer4 = styled.div`
+display: flex;
+flex-direction: column;
+background-color: ${Themes.black};
+color: ${Themes.yellow};
+align-items: center;
 `
 
 export const Title = styled.h1`

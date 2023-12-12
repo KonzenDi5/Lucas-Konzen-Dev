@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Layer1, Layer2, Layer3, Frase, Logo, Title, Subtitle, Text, Conteudo, Decor, Macbook } from './styles';
+import { Container, Layer1, Layer2, Layer3, Layer4,  Frase, Logo, Title, Subtitle, Text, Conteudo, Decor, Macbook } from './styles';
 import logoimage from '../../assets/LOGOBLACK.png';
 import coracao from '../../assets/IMG_0602.PNG';
 import mao from '../../assets/IMG_0601.PNG';
@@ -8,6 +8,8 @@ import macbookPiscada from '../../assets/IMG_0600piscada.png';
 import rosto from '../../assets/IMG_0598.PNG';
 import piscadela from '../../assets/IMG_0597.PNG';
 import ideia from '../../assets/IMG_0599.PNG';
+import zen from '../../assets/IMG_0676.PNG';
+import pare from '../../assets/IMG_0677.PNG';
 import { Fade, Zoom } from 'react-reveal';
 import {Button} from '../../components/Button'
 import { Link } from 'react-router-dom';
@@ -23,7 +25,7 @@ export const Home = () => {
     if (text.length < fullText.length) {
       setTimeout(() => {
         setText(fullText.slice(0, text.length + 1));
-      }, 100); // Ajuste a velocidade aqui
+      }, 50); // Ajuste a velocidade aqui
     } else {
       setTimeout(() => {
         setShowButtons(true);
@@ -115,6 +117,22 @@ export const Home = () => {
           </Conteudo>
         </Zoom>
       </Layer2>
+
+      <Layer3>
+        <Zoom>
+        <Subtitle>2019:</Subtitle>
+        <Text> Aos 20 anos, decidi estudar desenvolvimento web, fundindo minha criatividade com a habilidade de codificar.</Text>
+        <Decor alt="Decor" src={zen} />
+        </Zoom>
+      </Layer3>
+
+      <Layer4>
+        <Zoom>
+        <Subtitle>Atualidade:</Subtitle>
+        <Text>Formado em Análise e Desenvolvimento de Sistemas, estou em busca de construir uma sólida carreira como desenvolvedor web. Com mais de 32 cursos no currículo, domino tecnologias como C#, .NET, Mediator, React, Firebase, Flutter e JavaScript Avançado ES6. Meu trabalho em projetos próprios reflete minha constante busca por conhecimento e aprimoramento profissional.</Text>
+        <Decor alt="Decor" src={pare} />
+        </Zoom>
+      </Layer4>
     </Container>
   );
 };
