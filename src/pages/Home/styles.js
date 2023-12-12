@@ -64,3 +64,8 @@ font-family: 'Source code pro';
 font-size: 16px;
 `
 
+export const IconButton = styled.div`
+display: flex;
+flex-direction: row;
+`
+

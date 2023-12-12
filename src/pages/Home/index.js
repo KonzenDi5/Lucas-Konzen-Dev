@@ -4,13 +4,19 @@ import logoimage from '../../assets/LOGOBLACK.png';
 import coracao from '../../assets/IMG_0602.PNG';
 import mao from '../../assets/IMG_0601.PNG';
 import macbook from '../../assets/IMG_0600.PNG';
+import macbookPiscada from '../../assets/IMG_0600piscada.png';
 import rosto from '../../assets/IMG_0598.PNG';
 import piscadela from '../../assets/IMG_0597.PNG';
 import ideia from '../../assets/IMG_0599.PNG';
 import { Fade, Zoom } from 'react-reveal';
+import {Button} from '../../components/Button'
+import { Link } from 'react-router-dom';
+import linkedin from '../../assets/linkedin.png'
 
 export const Home = () => {
   const [text, setText] = useState('');
+  const [showButtons, setShowButtons] = useState(false);
+  const [isMacbookWinking, setIsMacbookWinking] = useState(false);
   const fullText = 'Knowledge is boldness, make the change.';
 
   useEffect(() => {
@@ -18,16 +24,44 @@ export const Home = () => {
       setTimeout(() => {
         setText(fullText.slice(0, text.length + 1));
       }, 100); // Ajuste a velocidade aqui
+    } else {
+      setTimeout(() => {
+        setShowButtons(true);
+      }, 2000); // Atraso de 3 segundos
     }
   }, [text]);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIsMacbookWinking(prevState => !prevState); // inverte o estado atual
+    }, isMacbookWinking ? 500 : 3000); // pisca a cada 3 segundos e fecha por 0,5 segundos
+
+    return () => {
+      clearInterval(timer); // limpa o intervalo quando o componente é desmontado
+    };
+  }, [isMacbookWinking]);
 
   return (
     <Container>
       <Layer1>
         <Logo src={logoimage} alt="logo" />
-        <Frase>{text}</Frase>
-        <Macbook alt="mac" src={macbook} />
+        {!showButtons ? <Frase>{text}</Frase> : <><Fade>
+          <Link to= 'https://github.com/KonzenDi5'>
+          <Button label = 'GITHUB' />
+          </Link>
+
+          <Link to= 'https://www.linkedin.com/in/lucas-da-silva-konzen-73a02a220/'>
+          <Button label = 'LINKEDIN'/>
+          </Link>
+
+          <Link to= 'https://www.instagram.com/httpkonzen/'>
+          <Button src={linkedin} label = 'INSTAGRAM'/>
+          </Link>
+          </Fade></>}
+          
+        <Macbook alt="mac" src={isMacbookWinking ? macbookPiscada : macbook} />
       </Layer1>
+
 
       <Layer2>
         <Fade>
@@ -83,4 +117,4 @@ export const Home = () => {
       </Layer2>
     </Container>
   );
-}
+};
