@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Layer1, Layer2, Layer3, Frase, Logo, Title, Subtitle, Text, Conteudo, Decor, Macbook } from './styles';
 import logoimage from '../../assets/LOGOBLACK.png';
 import coracao from '../../assets/IMG_0602.PNG';
@@ -10,11 +10,22 @@ import ideia from '../../assets/IMG_0599.PNG';
 import { Fade, Zoom } from 'react-reveal';
 
 export const Home = () => {
+  const [text, setText] = useState('');
+  const fullText = 'Knowledge is boldness, make the change.';
+
+  useEffect(() => {
+    if (text.length < fullText.length) {
+      setTimeout(() => {
+        setText(fullText.slice(0, text.length + 1));
+      }, 100); // Ajuste a velocidade aqui
+    }
+  }, [text]);
+
   return (
     <Container>
       <Layer1>
         <Logo src={logoimage} alt="logo" />
-        <Frase />
+        <Frase>{text}</Frase>
         <Macbook alt="mac" src={macbook} />
       </Layer1>
 
@@ -73,5 +84,3 @@ export const Home = () => {
     </Container>
   );
 }
-
-

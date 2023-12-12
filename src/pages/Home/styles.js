@@ -60,6 +60,7 @@ export const Logo = styled.img`
 `
 
 export const Frase = styled.div`
-font-size: 24px;
+font-family: 'Source code pro';
+font-size: 16px;
 `
 
