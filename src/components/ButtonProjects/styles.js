@@ -75,16 +75,12 @@ position: relative;
 
   &:hover {
     transform: scale(1.1);
-
-    text-decoration: none;
-
   }
 
   &:active {
 
     background-origin: border-box;
     background-clip: content-box, border-box;
-    animation: none;
   }
 
 `;
