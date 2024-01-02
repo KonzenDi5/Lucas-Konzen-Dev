@@ -81,16 +81,12 @@ position: relative;
   }
 
   &:active {
-    border: double 4px #FE53BB;
+
     background-origin: border-box;
     background-clip: content-box, border-box;
     animation: none;
-    text-decoration: none;
   }
 
-  a {
-    text-decoration: none;
-  }
 `;
 
 export const ContainerStars = styled.div`

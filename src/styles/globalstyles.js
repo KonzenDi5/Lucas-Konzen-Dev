@@ -20,7 +20,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   #root {
-    background: ${Themes.hiperyellow};
+    background: ${Themes.yellow};
     background-repeat: no-repeat;
     background-size: calc(120vh / 2);
     background-position: center right;
@@ -30,7 +30,7 @@ export const GlobalStyles = createGlobalStyle`
 
   @media (max-width: 768px) {
     #root {
-      background: ${Themes.hiperyellow};
+      background: ${Themes.yellow};
     }
   }
 `
