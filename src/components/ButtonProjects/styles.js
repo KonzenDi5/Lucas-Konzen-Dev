@@ -46,6 +46,11 @@ const animStarRotate = keyframes`
   }
 `;
 
+export const empty = keyframes`
+  0% {}
+  100% {}
+`;
+
 export const ButtonStyle = styled.button`
 position: relative;
   display: flex;
@@ -97,7 +102,7 @@ export const ContainerStars = styled.div`
   transition: 0.5s;
   backdrop-filter: blur(1rem);
   border-radius: 5rem;
-  
+  animation: ${empty} 1s infinite;
 `;
 
 export const Glow = styled.div`
