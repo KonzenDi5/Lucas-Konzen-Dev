@@ -145,3 +145,4 @@ export const Stars = styled.div`
     opacity: 0.5;
   }
 `;
+
