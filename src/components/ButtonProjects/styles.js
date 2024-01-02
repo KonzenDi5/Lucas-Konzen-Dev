@@ -86,15 +86,14 @@ position: relative;
 `;
 
 export const ContainerStars = styled.div`
-  position: absolute;
-  z-index: -1;
+  position: fixed;
+  z-index: -2;
   width: 100%;
   height: 100%;
   overflow: hidden;
   transition: 0.5s;
   backdrop-filter: blur(1rem);
   border-radius: 5rem;
-  animation: ${empty} 1s infinite;
 `;
 
 export const Glow = styled.div`
