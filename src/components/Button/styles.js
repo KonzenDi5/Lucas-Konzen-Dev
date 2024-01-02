@@ -5,6 +5,7 @@ import {Themes} from '../../styles/themes'
 export const ButtonStyle = styled.button`
   background-color: ${Themes.yellow};
   border: 3px solid black;
+  color: black;
   padding: 10px;
   border-radius: 22px;
   box-shadow: 2px 2px 1px black;

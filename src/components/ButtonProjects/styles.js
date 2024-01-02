@@ -47,6 +47,7 @@ const animStarRotate = keyframes`
 `;
 
 export const ButtonStyle = styled.button`
+position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
