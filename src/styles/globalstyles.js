@@ -6,7 +6,7 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
   }
 
   body,
@@ -20,7 +20,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   #root {
-    background: ${Themes.yellow};
+    background: ${Themes.hiperyellow};
     background-repeat: no-repeat;
     background-size: calc(120vh / 2);
     background-position: center right;
@@ -30,7 +30,7 @@ export const GlobalStyles = createGlobalStyle`
 
   @media (max-width: 768px) {
     #root {
-      background: ${Themes.white};
+      background: ${Themes.hiperyellow};
     }
   }
 `

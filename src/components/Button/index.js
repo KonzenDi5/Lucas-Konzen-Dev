@@ -1,6 +1,6 @@
-import { ButtonStyle } from "./styles";
+import { ButtonStyle, Icon } from "./styles";
 
-export const Button = ({ label, type, onClick, onChange, color }) => {
+export const Button = ({ label, type, onClick, onChange, color, variant }) => {
   return (
     <ButtonStyle
       type={type}
@@ -8,6 +8,7 @@ export const Button = ({ label, type, onClick, onChange, color }) => {
       onChange={onChange ? onChange : undefined}
       color={color}
     >
+      <Icon variant={variant} />
       {label}
     </ButtonStyle>
   );

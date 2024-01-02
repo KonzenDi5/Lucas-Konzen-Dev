@@ -4,5 +4,6 @@ export const Themes = {
     lightyellow: '#FFFC89',
     white: '#FFFFFF',
     gray: '#606060',
+    hiperyellow: '#FAA300'
   }
   

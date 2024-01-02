@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Layer1, Layer2, Layer3, Layer4,  Frase, Logo, Title, Subtitle, Text, Conteudo, Decor, Macbook } from './styles';
+import { Container, Layer1, Layer2, Layer3, Layer4, Frase, Logo, Title, Subtitle, Text, Conteudo, Decor, Macbook, ButtonsRow, StyledLink } from './styles';
 import logoimage from '../../assets/LOGOBLACK.png';
 import coracao from '../../assets/IMG_0602.PNG';
 import mao from '../../assets/IMG_0601.PNG';
@@ -12,8 +12,10 @@ import zen from '../../assets/IMG_0676.PNG';
 import pare from '../../assets/IMG_0677.PNG';
 import { Fade, Zoom } from 'react-reveal';
 import {Button} from '../../components/Button'
+import {ButtonProjects} from '../../components/ButtonProjects'
 import { Link } from 'react-router-dom';
-import linkedin from '../../assets/linkedin.png'
+
+
 
 export const Home = () => {
   const [text, setText] = useState('');
@@ -48,17 +50,27 @@ export const Home = () => {
       <Layer1>
         <Logo src={logoimage} alt="logo" />
         {!showButtons ? <Frase>{text}</Frase> : <><Fade>
+
+        <StyledLink to= '/projetos'>
+          <ButtonProjects  label = 'PROJETOS'/>
+          </StyledLink>
+          <StyledLink to= '/'>
+          <ButtonProjects  label = 'CERTIFICAÇÕES'/>
+          </StyledLink>
+
+          <ButtonsRow>
           <Link to= 'https://github.com/KonzenDi5'>
           <Button label = 'GITHUB' />
           </Link>
 
           <Link to= 'https://www.linkedin.com/in/lucas-da-silva-konzen-73a02a220/'>
-          <Button label = 'LINKEDIN'/>
+          <Button label = 'LINKEDIN' />
           </Link>
 
           <Link to= 'https://www.instagram.com/httpkonzen/'>
-          <Button src={linkedin} label = 'INSTAGRAM'/>
+          <Button  label = 'INSTAGRAM' />
           </Link>
+          </ButtonsRow>
           </Fade></>}
           
         <Macbook alt="mac" src={isMacbookWinking ? macbookPiscada : macbook} />

@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Themes } from '../../styles/themes'
+import { Link } from 'react-router-dom'
 
 
 
@@ -22,8 +23,6 @@ width: 300px;
 `
 
 export const Layer2 = styled.div`
-display: flex;
-flex-direction: row;
 background-color: ${Themes.black};
 color: ${Themes.yellow};
 `
@@ -79,4 +78,11 @@ export const IconButton = styled.div`
 display: flex;
 flex-direction: row;
 `
-
+export const ButtonsRow = styled.div`
+display: flex;
+flex-direction: row;
+pad: 15px;
+`
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
