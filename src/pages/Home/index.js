@@ -13,7 +13,6 @@ import pare from '../../assets/IMG_0677.PNG';
 import { Fade, Zoom } from 'react-reveal';
 import {Button} from '../../components/Button'
 import {ButtonProjects} from '../../components/ButtonProjects'
-import { Link } from 'react-router-dom';
 
 
 
@@ -59,17 +58,17 @@ export const Home = () => {
           </StyledLink>
 
           <ButtonsRow>
-          <Link to= 'https://github.com/KonzenDi5'>
+          <StyledLink to= 'https://github.com/KonzenDi5'>
           <Button label = 'GITHUB' />
-          </Link>
+          </StyledLink>
 
-          <Link to= 'https://www.linkedin.com/in/lucas-da-silva-konzen-73a02a220/'>
+          <StyledLink to= 'https://www.linkedin.com/in/lucas-da-silva-konzen-73a02a220/'>
           <Button label = 'LINKEDIN' />
-          </Link>
+          </StyledLink>
 
-          <Link to= 'https://www.instagram.com/httpkonzen/'>
+          <StyledLink to= 'https://www.instagram.com/httpkonzen/'>
           <Button  label = 'INSTAGRAM' />
-          </Link>
+          </StyledLink>
           </ButtonsRow>
           </Fade></>}
           
