@@ -115,7 +115,7 @@ export const Circle = styled.div`
 `;
 
 export const Stars = styled.div`
-  position: absolute;
+  position: relative;
   background: transparent;
   width: 200rem;
   height: 200rem;
