@@ -1,7 +1,15 @@
-import React from 'react';
+
 import { ButtonStyle, ContainerStars, Glow, Circle, Stars } from './styles';
+import React, { useEffect } from 'react';
+
 
 export const ButtonProjects = ({ label, type, onClick, onChange, color }) => {
+  useEffect(() => {
+    console.log('useEffect triggered');
+    const containerStars = document.getElementById('container-stars');
+    containerStars.style.animationPlayState = 'running';
+  }, []);
+
   return (
     <ButtonStyle
       type={type}
