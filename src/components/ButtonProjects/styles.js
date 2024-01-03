@@ -30,8 +30,8 @@ export const ButtonStyle = styled.button`
     width: 15px;
     height: 200px;
     margin-top: -92px;
-    background: linear-gradient(#606060,#FAA300);
-    animation: ${amm} 4s linear infinite;
+    background: linear-gradient(black,#FAAA00);
+    animation: ${amm} 2s linear infinite;
   }
 
   &::after {
@@ -46,7 +46,7 @@ export const ButtonStyle = styled.button`
 
 export const TextButton = styled.span`
   position: relative;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
   color: ${Themes.yellow};
   z-index: 1;
