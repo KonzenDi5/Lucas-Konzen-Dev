@@ -49,18 +49,11 @@ const animStarRotate = keyframes`
 
 
 export const ButtonStyle = styled.button`
-
-@keyframes empty {
-    0% {}
-    100% {}
-  }
-
 position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 13rem;
-
   overflow: hidden;
   color: white;
   height: 3rem;
@@ -75,7 +68,6 @@ position: relative;
   background-clip: content-box, border-box;
   font-family: 'Bebas Neue', sans-serif;
   font-size: 20px;
-  text-decoration: none !important;
 
   &:hover {
     transform: scale(1.1);
