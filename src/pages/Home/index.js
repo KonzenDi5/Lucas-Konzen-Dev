@@ -53,7 +53,7 @@ export const Home = () => {
         <StyledLink to= '/projetos'>
           <ButtonProjects  label = 'PROJETOS'/>
           </StyledLink>
-          <StyledLink to= '/'>
+          <StyledLink to= '/certificacoes'>
           <ButtonProjects  label = 'CERTIFICAÇÕES'/>
           </StyledLink>
 
